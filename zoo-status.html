@@ -64,6 +64,25 @@ ul.rig.columns-6 li {
 	width: 13.60%; /* this value + 2.5 should = 20% */
 }
 
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.rig {
+		margin-left: 0;
+	}
+	ul.rig li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+
 h1 {
     color: #fff;
 	text-align: center;
@@ -179,7 +198,7 @@ p {
 
 <div title="Condor Watch">
 <p>
-<a href = "https://api.zooniverse.org/projects/condor/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
+<a href = "https://api.zooniverse.org/projects/condors/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
 </p>
 </div>
 

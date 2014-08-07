@@ -198,7 +198,7 @@ p {
 
 <div title="Condor Watch">
 <p>
-<a href = "https://api.zooniverse.org/projects/condor/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
+<a href = "https://api.zooniverse.org/projects/condors/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
 </p>
 </div>
 

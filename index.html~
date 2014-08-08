@@ -198,7 +198,7 @@ p {
 
 <div title="Condor Watch">
 <p>
-<a href = "https://api.zooniverse.org/projects/condors/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
+<a href = "https://api.zooniverse.org/projects/condor/status" target = "_blank"><img src= "images/avatar_condors.jpg" alt = "Condor Watch"> </img></href>
 </p>
 </div>
 
@@ -289,6 +289,16 @@ p {
 <div title="Spacewarps">
 <p>
 <a href = "https://api.zooniverse.org/projects/spacewarp/status" target = "_blank"><img src= "images/spacewarps.jpg" alt = "Spacewarps"> </img></href>
+</p>
+</div>
+
+</li>
+
+<li>
+
+<div title="Floating Forests">
+<p>
+<a href = "https://api.zooniverse.org/projects/kelp/status" target = "_blank"><img src= "images/avatar_kelp.png" alt = "Floating Forests"> </img></href>
 </p>
 </div>
 

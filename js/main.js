@@ -16,7 +16,7 @@ function itemHTML(p) {
 	$.getJSON("https://api.zooniverse.org/projects/"+p["name"]+"/", function(data) {
 
 		item = 	"<li>"+
-		"<div title=\""+p["display_name"]+"\">"+
+		"<div id=\""+p["name"]+"\" title=\""+p["display_name"]+"\">"+
 			"<a href=\"https://api.zooniverse.org/projects/"+p["name"]+"/status\" target=\"_blank\">"+
 				"<img src=\"images/"+p["name"]+".jpg\" alt=\""+p["display_name"]+"\" />"+
 			"</a>"+

@@ -16,12 +16,12 @@ function itemHTML(p) {
 	$.getJSON("https://api.zooniverse.org/projects/"+p["name"]+"/", function(data) {
 
 		item = 	"<li>"+
-		"<div id=\""+p["name"]+"\" title=\""+p["display_name"]+"\">"+
+		"<div id=\""+p["name"]+"\" class=\"project-box\" title=\""+p["display_name"]+"\">"+
 			"<a href=\"https://api.zooniverse.org/projects/"+p["name"]+"/status\" target=\"_blank\">"+
 				"<img src=\"images/"+p["name"]+".jpg\" alt=\""+p["display_name"]+"\" />"+
 			"</a>"+
 			"<span class=\"counts\">"+
-				"<span title=\"Classifications\" class=\"left\">"+addCommas(data["classification_count"])+"</span>"+
+				"<span title=\"Classifications\" id=\""+p["name"]+"-counter\" class=\"left\">"+addCommas(data["classification_count"])+"</span>"+
 				"<span title=\"Registered Users\" class=\"right\">"+addCommas(data["user_count"])+"</span>"+
 			"</span>"+
 		"</div>"+

@@ -23,11 +23,16 @@ function onClose(evt) {
 
 function onMessage(evt) {
 	console.log(evt.data);
+
 }
 
 function onError(evt) {
 	console.log("Error:");
 	console.log(evt.data);
+}
+
+function onClassification(project) {
+	// animate project accordingly
 }
 
 window.addEventListener("load", init, false);

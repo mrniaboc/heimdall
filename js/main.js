@@ -1,3 +1,9 @@
+function removeCommas(nStr) {
+	nStr += '';
+	n = parseInt(nStr.replace(/,/g, ''));
+	return n;
+}
+
 function addCommas(nStr) {
 	nStr += '';
 	x = nStr.split('.');
@@ -8,6 +14,27 @@ function addCommas(nStr) {
 		x1 = x1.replace(rgx, '$1' + ',' + '$2');
 	}
 	return x1 + x2;
+}
+
+function addCircle(project) {
+    var pulse = $('<div class="pulse"></div>');
+    pulse.animate({
+        'width': '140%',
+        'height': '140%',
+        'margin-top': '-70%',
+        'margin-left': '-70%',
+        'opacity': '0.05'
+    }, 1000);
+    
+    $('#'+project).append(pulse);
+
+    setTimeout(function __remove() {
+        $('#'+project).effect( "shake", { times:2, distance:2 }, 300 );
+    }, 500);
+
+    setTimeout(function __remove() {
+        pulse.remove();
+    }, 1000);
 }
 
 // Function to create each prpoject's HTML

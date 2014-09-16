@@ -1,8 +1,8 @@
 var ws = "ws://event.zooniverse.org/classifications";
 
 function init() {
-	if( typeof(WebSocket) != "function" ) {
-    	openEventsSocket();
+	if ("WebSocket" in window)  {
+	  openEventsSocket();
  	} else {
  		console.log("Browser does not support web sockets");
  	}
@@ -18,7 +18,7 @@ function openEventsSocket() {
 
 function onOpen(evt) {
 	console.log("Connected to Zooniverse event stream...");
-	console.log("Ed Paget rules!");
+//	console.log("Ed Paget rules!");
 }
 
 function onClose(evt) {
@@ -26,8 +26,12 @@ function onClose(evt) {
 }
 
 function onMessage(evt) {
-	proj = JSON.parse(evt.data).project;
-	onClassification(proj);
+	try {
+    proj = JSON.parse(evt.data).project;
+		onClassification(proj);
+  } catch(e) {
+		console.log("Invalid JSON message from the event stream.");
+  }
 }
 
 function onError(evt) {

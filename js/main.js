@@ -25,7 +25,7 @@ function addCircle(project) {
         'margin-left': '-70%',
         'opacity': '0.05'
     }, 1000);
-    
+
     $('#'+project).append(pulse);
 
     setTimeout(function __remove() {
@@ -45,7 +45,7 @@ function itemHTML(p) {
 		item = 	"<li>"+
 		"<div id=\""+p["name"]+"\" class=\"project-box\" title=\""+p["display_name"]+"\">"+
 			"<a href=\"https://api.zooniverse.org/projects/"+p["name"]+"/status\" target=\"_blank\">"+
-				"<img src=\"images/"+p["name"]+".jpg\" alt=\""+p["display_name"]+"\" />"+
+				"<img src=\"http://static.zooniverse.org/heimdall.zooniverse.org/images/"+p["name"]+".jpg\" alt=\""+p["display_name"]+"\" />"+
 			"</a>"+
 			"<span class=\"counts\">"+
 				"<span title=\"Classifications\" id=\""+p["name"]+"-counter\" class=\"left\">"+addCommas(data["classification_count"])+"</span>"+
@@ -62,7 +62,7 @@ function itemHTML(p) {
 function loadProjects() {
 	// List of identifiers to ignore (i.e. Not show)
 	ignore_these = ["m83", "impossible_line", "leaf", "cancer_gene_runner", "galaxy_zoo_starburst", "galaxy_zoo_quiz"]
-	
+
 	// Get .ist of projects from API annd create items for display
 	$.getJSON( "https://api.zooniverse.org/projects/list", function( data ) {
 		var projects = [];

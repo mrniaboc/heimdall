@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/live.js"></script>
+	<!--  Load JS then execute loadProjects after page loads -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		loadProjects();
+	});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Zooniverse Project Status Pages</h1>
+	<p>Click on an avatar below to view the status page for that project</p>
+
+	<ul id="project_list" class="rig columns-6">
+	<!-- This is where the project list goes	 -->
+	</ul>
+
+	</body>
+</html>
